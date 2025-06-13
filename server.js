@@ -6,7 +6,6 @@ const app = express();
 app.use(cors());
 app.use(express.static('public'));
 
-// GET /api/products → return your GPU array
 app.get('/api/products', (req, res) => {
   res.json(products);
 });
