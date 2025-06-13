@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+h1 {
+  color: #c00;
+}
+
+a#load {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #06c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+pre {
+  background: #f4f4f4;
+  padding: 1rem;
+  overflow-x: auto;
+}
