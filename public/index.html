@@ -2,19 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NVIDIA Pulse Products</title>
+  <title>NVIDIA Pulse API</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>NVIDIA Pulse</h1>
-  </header>
+  <div class="api-container">
+    <!-- Left column: API description -->
+    <section class="api-info">
+      <h1>NVIDIA Pulse API</h1>
+      <h2>Get All Products:</h2>
+      <a href="/api/products" id="load">All Products</a>
+    </section>
 
-  <main>
-    <h2>Our Products</h2>
-    <div id="products-container" class="grid"></div>
-  </main>
+    <!-- Right column: JSON output -->
+    <section class="api-output">
+      <pre id="output"></pre>
+    </section>
+  </div>
 
-  <script src="app.js"></script>
+  <script>
+    document.getElementById('load').addEventListener('click', async e => {
+      e.preventDefault();
+      const res = await fetch('/api/products');
+      const data = await res.json();
+      document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+    });
+  </script>
 </body>
 </html>
