@@ -1,0 +1,26 @@
+[
+  {
+    "id": "5060",
+    "name": "GeForce RTX 5060",
+    "description": "The GeForce RTX 5060 delivers 12 TFLOPs of FP32 compute for exceptional 1440p gaming, equipped with 3072 CUDA cores, 8 GB GDDR6, and full hardware-accelerated ray tracing with DLSS 3.0 support.",
+    "price": 349,
+    "image": "images/5060.png",
+    "slug": "5060"
+  },
+  {
+    "id": "4070ti",
+    "name": "GeForce RTX 4070 Ti",
+    "description": "Built on Ada Lovelace, the RTX 4070 Ti features 7680 CUDA cores, 12 GB GDDR6X, and 90 RT cores—ideal for 4K gaming and creative workloads at an affordable price.",
+    "price": 799,
+    "image": "images/5070ti.png",
+    "slug": "4070ti"
+  },
+  {
+    "id": "A4500",
+    "name": "NVIDIA RTX A4500",
+    "description": "A workstation-class GPU with 7168 CUDA cores, 20 GB GDDR6, and ECC memory, the RTX A4500 excels at AI inference, 3D rendering, and simulation workloads.",
+    "price": 2399,
+    "image": "images/a4500.png",
+    "slug": "A4500"
+  }
+]

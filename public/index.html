@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NVIDIA Pulse API</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="api-container">
+    <!-- Left column: API description -->
+    <section class="api-info">
+      <h1>NVIDIA Pulse API</h1>
+      <h2>Get All Products:</h2>
+      <a href="/api/products" id="load">All Products</a>
+    </section>
+
+    <!-- Right column: JSON output -->
+    <section class="api-output">
+      <pre id="output"></pre>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById('load').addEventListener('click', async e => {
+      e.preventDefault();
+      const res = await fetch('/api/products');
+      const data = await res.json();
+      document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+    });
+  </script>
+</body>
+</html>

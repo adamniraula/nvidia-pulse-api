@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact NVIDIA Pulse</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+
+  <main>
+    <form id="contact-form">
+      <label>Name<input type="text" name="name" required></label>
+      <label>Email<input type="email" name="email" required></label>
+      <label>Message<textarea name="message" rows="4" required></textarea></label>
+      <button type="submit">Send</button>
+      <div id="form-status"></div>
+    </form>
+  </main>
+
+  <script>
+    // you can wire Formspree or your own endpoint here
+    document.getElementById('contact-form').addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('form-status').textContent = 'Thank you!';
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
